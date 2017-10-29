@@ -8,7 +8,8 @@ export default {
   namespaced,
   state () {
     return {
-      items: 0
+      items: 0,
+      loading: false
     }
   },
   actions,

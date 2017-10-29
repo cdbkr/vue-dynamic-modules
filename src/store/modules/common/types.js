@@ -1,3 +1,4 @@
 export default {
-  SUCCESS: 'SUCCESS'
+  SUCCESS: 'SUCCESS',
+  LOADING: 'LOADING'
 };

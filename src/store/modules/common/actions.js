@@ -8,12 +8,13 @@ const randomInt = (min, max) => {
 
 const generate = ({ commit, state }, options = {}) => {
   const { min = 0, max = 100 } = options;
-  if (state.items === 0) {
+  if (state.items === 0 && !state.loading) {
+    commit(types.LOADING);
     setTimeout(() => {
       commit(types.SUCCESS, {
         items: randomInt(min, max)
       });
-    }, 5000);
+    }, 2000);
   }
 };
 
